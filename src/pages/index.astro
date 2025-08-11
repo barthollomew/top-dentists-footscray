@@ -1,16 +1,397 @@
 ---
-
+import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout
+  title="Top Dentists in Footscray | Affordable, Trusted Dental Care Since 1994"
+  description="Experience the affordable dental care in Footscray with our trusted team, providing professional treatments since 1994. Our modern facilities, experienced dentists, and commitment to patient comfort ensure exceptional results and satisfaction."
+  type="LocalBusiness"
+>
+  <!-- Skip to main content for accessibility -->
+  <a href="#main-content" class="skip-to-main">Skip to main content</a>
+
+  <!-- Hero Section -->
+  <section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary-500 to-primary-600" id="main-content">
+    <div class="container mx-auto px-4 py-20">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <!-- Hero Content -->
+        <div class="text-white space-y-8 animate-slide-up">
+          <h1 class="text-hero font-heading font-bold leading-tight">
+            <span class="block">Affordable dental care</span>
+            <span class="block text-primary-100">since 1994.</span>
+          </h1>
+          <p class="text-xl lg:text-2xl text-primary-100 max-w-lg">
+            Delivering high quality dentistry to Footscray and the surrounding communities.
+          </p>
+          <a
+            href="https://apac.dentalhub.online/soe/new/%20?pid=AUTOP01"
+            class="btn btn-secondary text-lg inline-block"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Book Appointment
+          </a>
+        </div>
+
+        <!-- Hero Image -->
+        <div class="relative animate-fade-in">
+          <div class="relative z-10 rounded-2xl overflow-hidden shadow-2xl">
+            <picture>
+              <source
+                media="(max-width: 500px)"
+                srcset="/images/6022b17cb187ab211c1ca5ab957ba000_top-dentists-footscray-team-photo-p-500.webp"
+              />
+              <source
+                media="(max-width: 800px)"
+                srcset="/images/6022b17cb187ab211c1ca5ab957ba000_top-dentists-footscray-team-photo-p-800.webp"
+              />
+              <source
+                media="(max-width: 1080px)"
+                srcset="/images/6022b17cb187ab211c1ca5ab957ba000_top-dentists-footscray-team-photo-p-1080.webp"
+              />
+              <source
+                media="(max-width: 1600px)"
+                srcset="/images/6022b17cb187ab211c1ca5ab957ba000_top-dentists-footscray-team-photo-p-1600.webp"
+              />
+              <img
+                src="/images/6022b17cb187ab211c1ca5ab957ba000_top-dentists-footscray-team-photo.webp"
+                alt="Smiling dental team at Top Dentists Footscray"
+                width="1920"
+                height="1080"
+                loading="eager"
+                class="w-full h-auto"
+              />
+            </picture>
+          </div>
+          
+          <!-- Floating decoration elements -->
+          <div class="absolute -top-4 -right-4 w-20 h-20 bg-primary-300/20 rounded-full blur-xl"></div>
+          <div class="absolute -bottom-6 -left-6 w-32 h-32 bg-white/10 rounded-full blur-2xl"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Decorative background shapes -->
+    <div class="absolute top-0 right-0 w-1/3 h-full opacity-10">
+      <svg viewBox="0 0 200 200" class="w-full h-full">
+        <path d="M40,20 Q60,0 80,20 T120,20 T160,20 T200,20 L200,0 L0,0 Z" fill="currentColor"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- Insurance Partners Section -->
+  <section class="py-16 bg-white overflow-hidden">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-h3 font-heading font-semibold text-neutral-800 mb-4">
+          Trusted by Leading Health Funds
+        </h2>
+      </div>
+      
+      <!-- Scrolling ticker -->
+      <div class="relative">
+        <div class="flex animate-scroll space-x-12 items-center">
+          <img src="/images/hicaps.png" alt="HICAPS accepted" class="h-12 opacity-60 hover:opacity-100 transition-opacity" loading="lazy" />
+          <img src="/images/medibank.png" alt="Medibank accepted" class="h-12 opacity-60 hover:opacity-100 transition-opacity" loading="lazy" />
+          <img src="/images/invisalign.png" alt="Invisalign provider" class="h-12 opacity-60 hover:opacity-100 transition-opacity" loading="lazy" />
+          <img src="/images/hcf.png" alt="HCF accepted" class="h-12 opacity-60 hover:opacity-100 transition-opacity" loading="lazy" />
+          <img src="/images/bupa.png" alt="Bupa accepted" class="h-12 opacity-60 hover:opacity-100 transition-opacity" loading="lazy" />
+          <img src="/images/nationaldental.png" alt="National Dental accepted" class="h-12 opacity-60 hover:opacity-100 transition-opacity" loading="lazy" />
+          <img src="/images/ausunity.png" alt="Australian Unity accepted" class="h-12 opacity-60 hover:opacity-100 transition-opacity" loading="lazy" />
+          <img src="/images/ausdental.png" alt="AusDental accepted" class="h-12 opacity-60 hover:opacity-100 transition-opacity" loading="lazy" />
+          <img src="/images/damon.png" alt="Damon System provider" class="h-12 opacity-60 hover:opacity-100 transition-opacity" loading="lazy" />
+          <img src="/images/aadafa.png" alt="AADFA member" class="h-12 opacity-60 hover:opacity-100 transition-opacity" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="py-20 bg-background">
+    <div class="container mx-auto px-4">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <!-- Image -->
+        <div class="observe-fade">
+          <div class="relative rounded-2xl overflow-hidden shadow-xl">
+            <picture>
+              <source
+                media="(max-width: 500px)"
+                srcset="/images/b847e19f38e9fe229eb4a3da49535caf_top-dentists-footscray-receptionist-p-500.webp"
+              />
+              <source
+                media="(max-width: 800px)"
+                srcset="/images/b847e19f38e9fe229eb4a3da49535caf_top-dentists-footscray-receptionist-p-800.webp"
+              />
+              <source
+                media="(max-width: 1080px)"
+                srcset="/images/b847e19f38e9fe229eb4a3da49535caf_top-dentists-footscray-receptionist-p-1080.webp"
+              />
+              <img
+                src="/images/b847e19f38e9fe229eb4a3da49535caf_top-dentists-footscray-receptionist.webp"
+                alt="Friendly dental team at Top Dentists Footscray"
+                width="1401"
+                height="auto"
+                loading="lazy"
+                class="w-full h-auto"
+              />
+            </picture>
+          </div>
+        </div>
+
+        <!-- Content -->
+        <div class="space-y-8 observe-fade">
+          <div class="space-y-6">
+            <h2 class="text-h2 font-heading font-semibold text-neutral-800">
+              Trusted dentistry with a patient-first approach
+            </h2>
+            <p class="text-lg text-neutral-600 leading-relaxed">
+              For over 30 years, we've been committed to providing value for our patients, balancing high-quality service with fair pricing.
+            </p>
+          </div>
+
+          <!-- Mission Points -->
+          <div class="space-y-4">
+            <h3 class="text-xl font-semibold text-neutral-800 mb-4">Our Mission</h3>
+            <ul class="space-y-3">
+              {[
+                "Provide excellence in patient care with a wide range of services",
+                "Provide affordable dentistry",
+                "Promote preventative dentistry",
+                "Take the time to listen and advise",
+                "Be an all inclusive, non judgemental practice"
+              ].map(item => (
+                <li class="flex items-start space-x-3">
+                  <svg class="w-5 h-5 text-primary-500 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                  </svg>
+                  <span class="text-neutral-700">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <a href="/about-us" class="btn btn-primary inline-block">About Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16 observe-fade">
+        <h2 class="text-h2 font-heading font-semibold text-neutral-800 mb-6">
+          <span class="text-primary-500">Our Services</span>
+        </h2>
+        <p class="text-lg text-neutral-600 max-w-3xl mx-auto leading-relaxed">
+          It is important that our patients are empowered with choice and decision. We believe in a gentle approach and are committed to recommending only necessary treatments.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        {[
+          {
+            icon: "/images/service-icon-1.svg",
+            title: "General Dentistry",
+            description: "Offering comprehensive dental care for all ages, from early childhood to the golden years.",
+            link: "/services"
+          },
+          {
+            icon: "/images/core-feature-icon-11.svg",
+            title: "Restorative Dentistry", 
+            description: "Restoring smiles with solutions including implants, crowns, bridges, and dentures.",
+            link: "/services"
+          },
+          {
+            icon: "/images/wcu-icon-2.svg",
+            title: "Cosmetic Dentistry",
+            description: "Personalised cosmetic treatments, from smile makeovers to teeth whitening and Invisalign.",
+            link: "/services"
+          },
+          {
+            icon: "/images/service-icon-4.svg",
+            title: "Specialty Services",
+            description: "Protecting oral health with custom mouthguards, night guards, and Invisalign clear aligners.",
+            link: "/services"
+          }
+        ].map((service) => (
+          <a 
+            href={service.link}
+            class="group card p-8 hover:shadow-xl transition-all duration-300 observe-fade hover:-translate-y-2"
+          >
+            <div class="text-center space-y-4">
+              <div class="w-16 h-16 mx-auto mb-6 p-3 rounded-full bg-primary-50 group-hover:bg-primary-100 transition-colors">
+                <img
+                  src={service.icon}
+                  alt=""
+                  class="w-full h-full"
+                  loading="lazy"
+                />
+              </div>
+              <h3 class="text-xl font-semibold text-neutral-800 group-hover:text-primary-600 transition-colors">
+                {service.title}
+              </h3>
+              <p class="text-neutral-600 leading-relaxed">
+                {service.description}
+              </p>
+            </div>
+          </a>
+        ))}
+      </div>
+
+      <!-- Service Images -->
+      <div class="grid md:grid-cols-2 gap-8 observe-fade">
+        <div class="relative rounded-2xl overflow-hidden shadow-lg">
+          <picture>
+            <source
+              media="(max-width: 500px)"
+              srcset="/images/ad929b50fc0dae3f276a85b9b545b680_gentle-dentist-with-patient-p-500.webp"
+            />
+            <source
+              media="(max-width: 800px)"
+              srcset="/images/ad929b50fc0dae3f276a85b9b545b680_gentle-dentist-with-patient-p-800.webp"
+            />
+            <img
+              src="/images/ad929b50fc0dae3f276a85b9b545b680_gentle-dentist-with-patient.webp"
+              alt="Caring dentist assisting patient at Top Dentists Footscray"
+              width="691"
+              height="auto"
+              loading="lazy"
+              class="w-full h-auto"
+            />
+          </picture>
+        </div>
+        <div class="relative rounded-2xl overflow-hidden shadow-lg">
+          <picture>
+            <source
+              media="(max-width: 500px)"
+              srcset="/images/72fbdec8553842183108b05a208d14d8_dental-clinic-reception-footscray-p-500.webp"
+            />
+            <source
+              media="(max-width: 800px)"
+              srcset="/images/72fbdec8553842183108b05a208d14d8_dental-clinic-reception-footscray-p-800.webp"
+            />
+            <img
+              src="/images/72fbdec8553842183108b05a208d14d8_dental-clinic-reception-footscray.webp"
+              alt="Modern reception area at Top Dentists Footscray"
+              width="740"
+              height="auto"
+              loading="lazy"
+              class="w-full h-auto"
+            />
+          </picture>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="py-20 bg-background">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16 observe-fade">
+        <h2 class="text-h2 font-heading font-semibold text-neutral-800 mb-4">
+          What Our Patients Say
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        {[
+          {
+            text: "Very impressed by the thoroughness, professionalism and friendliness at top dentists. They looked after my 2 kids today and I was really happy with the treatment they received.",
+            author: "Dilesh Patel"
+          },
+          {
+            text: "The cost was given to me upfront and I thought it was very reasonable. I was very happy with how thorough everything was and the team were very thoughtful, respectful and polite to me.",
+            author: "Tuan Anh Le"
+          },
+          {
+            text: "First-time patient here. The surgery is beautiful, the staff is helpful, and I had a gentle clean and painless filling. Very reasonable cost too. Thank you!",
+            author: "LC"
+          }
+        ].map((testimonial) => (
+          <div class="card p-8 text-center observe-fade">
+            <div class="mb-6">
+              <img
+                src="/images/star-ratting.svg"
+                alt="5 star rating"
+                width="120"
+                height="auto"
+                class="mx-auto"
+                loading="lazy"
+              />
+            </div>
+            <blockquote class="text-neutral-700 italic text-lg leading-relaxed mb-6">
+              "{testimonial.text}"
+            </blockquote>
+            <cite class="text-primary-600 font-semibold">
+              - {testimonial.author}
+            </cite>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action Section -->
+  <section class="py-20 bg-primary-500 text-white text-center">
+    <div class="container mx-auto px-4 observe-fade">
+      <div class="max-w-3xl mx-auto space-y-8">
+        <h2 class="text-h2 font-heading font-semibold">
+          Ready to Schedule Your Visit?
+        </h2>
+        <p class="text-xl text-primary-100">
+          To organise an appointment please call
+          <a
+            href="tel:96875050"
+            class="text-white font-semibold hover:text-primary-100 transition-colors"
+          >
+            9687 5050
+          </a>
+          or press here to book online
+        </p>
+        <a
+          href="https://apac.dentalhub.online/soe/new/%20?pid=AUTOP01"
+          class="btn bg-white text-primary-500 hover:bg-primary-50 text-lg inline-block"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Book now
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-scroll {
+    animation: scroll 30s linear infinite;
+  }
+
+  /* Pause animation on hover for accessibility */
+  .animate-scroll:hover {
+    animation-play-state: paused;
+  }
+
+  /* Ensure smooth transitions */
+  .observe-fade {
+    transition-delay: 0.1s;
+  }
+
+  .observe-fade:nth-child(2n) {
+    transition-delay: 0.2s;
+  }
+
+  .observe-fade:nth-child(3n) {
+    transition-delay: 0.3s;
+  }
+</style>

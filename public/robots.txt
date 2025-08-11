@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://topdentistsfootscray.com.au/sitemap-index.xml

@@ -1,0 +1,162 @@
+---
+const currentPath = new URL(Astro.request.url).pathname;
+
+const navigation = [
+  { name: 'Home', href: '/' },
+  { name: 'About Us', href: '/about-us' },
+  { name: 'Services', href: '/services' },
+  { name: 'Dentists', href: '/dentists' },
+  { name: 'Sustainability', href: '/sustainability' },
+];
+---
+
+<header class="fixed top-0 left-0 right-0 z-50 bg-primary-500 shadow-lg">
+  <!-- Alert Banner -->
+  <div class="bg-primary-600 text-white py-2 text-center text-sm">
+    <div class="container mx-auto px-4">
+      <strong>Special: $100 Off Teeth Whitening!</strong>
+      <svg class="inline-block w-4 h-4 ml-2" fill="currentColor" viewBox="0 0 20 20">
+        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+      </svg>
+    </div>
+  </div>
+
+  <!-- Main Navigation -->
+  <nav class="bg-primary-500" aria-label="Main navigation">
+    <div class="container mx-auto px-4 py-4">
+      <div class="flex items-center justify-between">
+        <!-- Mobile Menu Button -->
+        <button
+          id="mobile-menu-button"
+          class="md:hidden text-white focus:outline-none focus:ring-2 focus:ring-white/25 p-2 rounded-md"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          aria-label="Toggle navigation menu"
+        >
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+
+        <!-- Desktop Navigation -->
+        <div class="hidden md:flex items-center space-x-8">
+          {navigation.map((item) => (
+            <a
+              href={item.href}
+              class={`text-white font-medium transition-colors hover:text-primary-100 ${
+                currentPath === item.href ? 'border-b-2 border-white pb-1' : ''
+              }`}
+              aria-current={currentPath === item.href ? 'page' : undefined}
+            >
+              {item.name}
+            </a>
+          ))}
+        </div>
+
+        <!-- Logo -->
+        <a 
+          href="/" 
+          class="flex items-center"
+          aria-label="Top Dentists Footscray - Home"
+        >
+          <img
+            src="/images/b17c66553a3c6189bde0e6fbac714f0f_top-dentists-footscray-logo-white.webp"
+            alt="Top Dentists Footscray logo"
+            width="85"
+            height="auto"
+            loading="eager"
+            class="h-12 w-auto"
+          />
+        </a>
+
+        <!-- Book Now Button -->
+        <a
+          href="https://apac.dentalhub.online/soe/new/%20?pid=AUTOP01"
+          class="bg-white text-primary-500 px-6 py-2 rounded-full font-semibold hover:bg-primary-50 transition-colors focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-primary-500"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Book Now
+        </a>
+      </div>
+
+      <!-- Mobile Navigation Menu -->
+      <div
+        id="mobile-menu"
+        class="md:hidden mt-4 pb-4 border-t border-primary-400 pt-4 hidden"
+        role="menu"
+      >
+        <div class="flex flex-col space-y-3">
+          {navigation.map((item) => (
+            <a
+              href={item.href}
+              class={`text-white font-medium py-2 px-3 rounded-md transition-colors hover:bg-primary-400 ${
+                currentPath === item.href ? 'bg-primary-400' : ''
+              }`}
+              role="menuitem"
+              aria-current={currentPath === item.href ? 'page' : undefined}
+            >
+              {item.name}
+            </a>
+          ))}
+          <div class="pt-2">
+            <a
+              href="tel:(03)96875050"
+              class="text-white font-bold text-lg hover:text-primary-100 transition-colors"
+            >
+              (03) 9687 5050
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- Spacer to prevent content from hiding behind fixed header -->
+<div class="h-24"></div>
+
+<script>
+  // Mobile menu functionality
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+  
+  if (mobileMenuButton && mobileMenu) {
+    mobileMenuButton.addEventListener('click', () => {
+      const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+      
+      mobileMenuButton.setAttribute('aria-expanded', String(!isExpanded));
+      mobileMenu.classList.toggle('hidden');
+      
+      // Update button icon
+      const icon = mobileMenuButton.querySelector('svg path');
+      if (icon) {
+        if (isExpanded) {
+          icon.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
+        } else {
+          icon.setAttribute('d', 'M6 18L18 6M6 6l12 12');
+        }
+      }
+    });
+  }
+
+  // Close mobile menu when clicking outside
+  document.addEventListener('click', (event) => {
+    if (mobileMenu && mobileMenuButton) {
+      const target = event.target as Element;
+      const isMenuButton = mobileMenuButton.contains(target);
+      const isMenuContent = mobileMenu.contains(target);
+      
+      if (!isMenuButton && !isMenuContent && !mobileMenu.classList.contains('hidden')) {
+        mobileMenu.classList.add('hidden');
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        
+        // Reset icon
+        const icon = mobileMenuButton.querySelector('svg path');
+        if (icon) {
+          icon.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
+        }
+      }
+    }
+  });
+</script>

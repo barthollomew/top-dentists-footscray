@@ -1,0 +1,276 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Our Services | General, Cosmetic & Restorative Care"
+  description="Explore our broad range of dental services in Footscray, from general and emergency dentistry to cosmetic and restorative treatments. We prioritize affordability and ethical practice, ensuring you receive only the necessary, personalized care."
+>
+  <!-- Page Header -->
+  <section class="py-20 bg-background">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center space-y-6">
+        <nav class="text-sm text-neutral-500 mb-6">
+          <ol class="flex items-center justify-center space-x-2">
+            <li><a href="/" class="hover:text-primary-500 transition-colors">Home</a></li>
+            <li>/</li>
+            <li class="text-neutral-800 font-medium">Services</li>
+          </ol>
+        </nav>
+        
+        <h1 class="text-h1 font-heading font-bold text-neutral-800">
+          Our Services
+        </h1>
+        
+        <!-- Hero Image -->
+        <div class="relative rounded-2xl overflow-hidden shadow-xl max-w-3xl mx-auto observe-fade">
+          <picture>
+            <source
+              media="(max-width: 500px)"
+              srcset="/images/chair-20pic-202-p-500.jpg"
+            />
+            <source
+              media="(max-width: 800px)"
+              srcset="/images/chair-20pic-202-p-800.jpg"
+            />
+            <source
+              media="(max-width: 1080px)"
+              srcset="/images/chair-20pic-202-p-1080.jpg"
+            />
+            <img
+              src="/images/chair-20pic-202.jpg"
+              alt="Modern dental chair at Top Dentists Footscray"
+              width="801"
+              height="auto"
+              loading="eager"
+              class="w-full h-auto"
+            />
+          </picture>
+        </div>
+
+        <div class="max-w-3xl mx-auto">
+          <p class="text-lg text-neutral-600 leading-relaxed">
+            We offer a broad range of dental services, emphasizing affordability and ethical practice. Our team is committed to recommending only necessary treatments, ensuring you receive appropriate and cost-effective care.
+          </p>
+          <p class="text-lg text-neutral-600 leading-relaxed mt-4">
+            For a pre-visit estimate, feel free to contact us with your information, and we will gladly provide assistance.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Grid -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+        <!-- General Dentistry -->
+        <div class="space-y-8 observe-fade">
+          <div class="text-center">
+            <div class="w-20 h-20 mx-auto mb-6 p-4 rounded-full bg-primary-50">
+              <img
+                src="/images/service-icon-1.svg"
+                alt=""
+                class="w-full h-full"
+                loading="lazy"
+              />
+            </div>
+            <h2 class="text-h3 font-heading font-semibold text-neutral-800 mb-4">
+              General Dentistry
+            </h2>
+            <p class="text-neutral-600 leading-relaxed mb-6">
+              Offering comprehensive dental care for all ages, from early childhood to the golden years.
+            </p>
+          </div>
+          
+          <div class="space-y-3">
+            <a href="/services/preventative-dental-care" class="block text-primary-600 hover:text-primary-700 transition-colors font-medium">
+              > Preventative Care
+            </a>
+            <a href="/services/childrens-dentistry" class="block text-primary-600 hover:text-primary-700 transition-colors font-medium">
+              > Children's Dentistry
+            </a>
+            <a href="/services/emergency-dentistry" class="block text-primary-600 hover:text-primary-700 transition-colors font-medium">
+              > Emergency Dentistry
+            </a>
+            <a href="/services/root-canal" class="block text-primary-600 hover:text-primary-700 transition-colors font-medium">
+              > Root Canal Treatment
+            </a>
+            <a href="/services/tooth-extraction" class="block text-primary-600 hover:text-primary-700 transition-colors font-medium">
+              > Tooth Extraction
+            </a>
+            <a href="/services/fillings" class="block text-primary-600 hover:text-primary-700 transition-colors font-medium">
+              > Fillings
+            </a>
+          </div>
+        </div>
+
+        <!-- Restorative Dentistry -->
+        <div class="space-y-8 observe-fade">
+          <div class="text-center">
+            <div class="w-20 h-20 mx-auto mb-6 p-4 rounded-full bg-primary-50">
+              <img
+                src="/images/wcu-icon-2.svg"
+                alt=""
+                class="w-full h-full"
+                loading="lazy"
+              />
+            </div>
+            <h2 class="text-h3 font-heading font-semibold text-neutral-800 mb-4">
+              Restorative Dentistry
+            </h2>
+            <p class="text-neutral-600 leading-relaxed mb-6">
+              Long lasting solutions to repair or replace teeth
+            </p>
+          </div>
+          
+          <div class="space-y-3">
+            <a href="/services/implants" class="block text-primary-600 hover:text-primary-700 transition-colors font-medium">
+              > Implants
+            </a>
+            <a href="/services/crowns" class="block text-primary-600 hover:text-primary-700 transition-colors font-medium">
+              > Crowns
+            </a>
+            <a href="/services/bridge" class="block text-primary-600 hover:text-primary-700 transition-colors font-medium">
+              > Bridges
+            </a>
+            <a href="/services/denture" class="block text-primary-600 hover:text-primary-700 transition-colors font-medium">
+              > Dentures
+            </a>
+          </div>
+        </div>
+
+        <!-- Cosmetic Dentistry -->
+        <div class="space-y-8 observe-fade">
+          <div class="text-center">
+            <div class="w-20 h-20 mx-auto mb-6 p-4 rounded-full bg-primary-50">
+              <img
+                src="/images/service-icon-4.svg"
+                alt=""
+                class="w-full h-full"
+                loading="lazy"
+              />
+            </div>
+            <h2 class="text-h3 font-heading font-semibold text-neutral-800 mb-4">
+              Cosmetic Dentistry
+            </h2>
+            <p class="text-neutral-600 leading-relaxed mb-6">
+              Tailored smiles to suit everyone's different needs
+            </p>
+          </div>
+          
+          <div class="space-y-3">
+            <a href="/services/porcelain-crowns-and-veneers" class="block text-primary-600 hover:text-primary-700 transition-colors font-medium">
+              > Porcelain Crowns & Veneers
+            </a>
+            <a href="/services/teeth-whitening" class="block text-primary-600 hover:text-primary-700 transition-colors font-medium">
+              > Teeth Whitening
+            </a>
+            <a href="/services/invisalign-and-clear-aligners" class="block text-primary-600 hover:text-primary-700 transition-colors font-medium">
+              > Invisalign & Clear Aligners
+            </a>
+          </div>
+        </div>
+
+        <!-- Specialty Services -->
+        <div class="space-y-8 observe-fade">
+          <div class="text-center">
+            <div class="w-20 h-20 mx-auto mb-6 p-4 rounded-full bg-primary-50">
+              <img
+                src="/images/core-feature-icon-11.svg"
+                alt=""
+                class="w-full h-full"
+                loading="lazy"
+              />
+            </div>
+            <h2 class="text-h3 font-heading font-semibold text-neutral-800 mb-4">
+              Specialty Services
+            </h2>
+            <p class="text-neutral-600 leading-relaxed mb-6">
+              Custom protection against trauma or wear and tear
+            </p>
+          </div>
+          
+          <div class="space-y-3">
+            <a href="/services/sports-mouthguards" class="block text-primary-600 hover:text-primary-700 transition-colors font-medium">
+              > Sports Mouthguards
+            </a>
+            <a href="/services/splints-night-guards" class="block text-primary-600 hover:text-primary-700 transition-colors font-medium">
+              > Splints (Night Guards)
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Additional Content Section -->
+  <section class="py-20 bg-background">
+    <div class="container mx-auto px-4">
+      <div class="grid lg:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
+        <!-- Content -->
+        <div class="space-y-6 observe-fade">
+          <p class="text-lg text-neutral-600 leading-relaxed">
+            We offer a broad range of dental services, emphasizing affordability and ethical practice. Our team is committed to recommending only necessary treatments, ensuring you receive appropriate and cost-effective care.
+          </p>
+          <p class="text-lg text-neutral-600 leading-relaxed">
+            For a pre-visit estimate, feel free to contact us with your information, and we will gladly provide assistance.
+          </p>
+        </div>
+
+        <!-- Image -->
+        <div class="observe-fade">
+          <div class="relative rounded-2xl overflow-hidden shadow-xl">
+            <picture>
+              <source
+                media="(max-width: 500px)"
+                srcset="/images/resized_20240531_105256-p-500.jpeg"
+              />
+              <source
+                media="(max-width: 800px)"
+                srcset="/images/resized_20240531_105256-p-800.jpeg"
+              />
+              <img
+                src="/images/resized_20240531_105256.jpeg"
+                alt="Dental treatment room at Top Dentists Footscray"
+                width="529"
+                height="auto"
+                loading="lazy"
+                class="w-full h-auto"
+              />
+            </picture>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="py-20 bg-primary-500 text-white text-center">
+    <div class="container mx-auto px-4 observe-fade">
+      <div class="max-w-3xl mx-auto space-y-8">
+        <h2 class="text-h2 font-heading font-semibold">
+          Ready for Your Dental Care?
+        </h2>
+        <p class="text-xl text-primary-100">
+          To organise an appointment please call
+          <a
+            href="tel:96875050"
+            class="text-white font-semibold hover:text-primary-100 transition-colors"
+          >
+            9687 5050
+          </a>
+          or press here to book online
+        </p>
+        <a
+          href="https://apac.dentalhub.online/soe/new/%20?pid=AUTOP01"
+          class="btn bg-white text-primary-500 hover:bg-primary-50 text-lg inline-block"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Book now
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
