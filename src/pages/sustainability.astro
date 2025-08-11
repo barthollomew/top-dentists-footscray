@@ -1,0 +1,275 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Sustainable Dental Practices in Footscray | Eco-Friendly Dentistry"
+  description="At Top Dentists Footscray, we are committed to reducing our environmental impact through sustainable dental practices. Discover our eco-friendly initiatives, including digitalization, energy-efficient equipment, and the use of non-toxic cleaning supplies."
+>
+  <!-- Page Header -->
+  <section class="py-20 bg-background">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <nav class="text-sm text-neutral-500 mb-6">
+          <ol class="flex items-center space-x-2">
+            <li><a href="/" class="hover:text-primary-500 transition-colors">Home</a></li>
+            <li>/</li>
+            <li class="text-neutral-800 font-medium">Sustainability</li>
+          </ol>
+        </nav>
+        
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <div class="space-y-8">
+            <h1 class="text-h1 font-heading font-bold text-neutral-800">
+              Sustainability
+            </h1>
+            
+            <div class="space-y-6">
+              <h2 class="text-2xl font-heading font-semibold text-primary-600">
+                Our Green Statement
+              </h2>
+              <p class="text-lg text-neutral-600 leading-relaxed">
+                Top Dentists Footscray are committed to assisting in a green future, ensuring an approach that reduces the environmental impact of dental practices. This involves using methods, technology, and equipment that reduce waste, conserve energy, and decrease potential pollution.
+              </p>
+            </div>
+          </div>
+
+          <!-- Hero Image -->
+          <div class="observe-fade">
+            <div class="relative rounded-2xl overflow-hidden shadow-xl">
+              <picture>
+                <source
+                  media="(max-width: 500px)"
+                  srcset="/images/dsc_4295-p-500.jpg"
+                />
+                <source
+                  media="(max-width: 800px)"
+                  srcset="/images/dsc_4295-p-800.jpg"
+                />
+                <source
+                  media="(max-width: 1080px)"
+                  srcset="/images/dsc_4295-p-1080.jpg"
+                />
+                <img
+                  src="/images/dsc_4295.jpg"
+                  alt="Sustainable dental practices at Top Dentists Footscray"
+                  width="583"
+                  height="auto"
+                  loading="eager"
+                  class="w-full h-auto"
+                />
+              </picture>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Initiatives Section -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto space-y-12">
+        
+        <!-- Sustainability Icon -->
+        <div class="text-center observe-fade">
+          <img
+            src="/images/sustainability-20-2-.png"
+            alt="Sustainability icon"
+            width="124"
+            height="auto"
+            loading="lazy"
+            class="mx-auto mb-8"
+          />
+          <h2 class="text-2xl font-heading font-semibold text-neutral-800 mb-8">
+            Steps We Have Taken
+          </h2>
+        </div>
+
+        <!-- Green Initiatives Grid -->
+        <div class="grid md:grid-cols-2 gap-8 observe-fade">
+          <div class="space-y-6">
+            {[
+              {
+                icon: "🔬",
+                title: "Reduced Chemical Usage",
+                description: "Less reliance on equipment that heavily depends on chemical usage"
+              },
+              {
+                icon: "💻", 
+                title: "Digital Procedures",
+                description: "Digitalising many of our procedures to reduce paper waste"
+              },
+              {
+                icon: "⚡",
+                title: "Energy Efficiency",
+                description: "The use of lower energy-consuming equipment"
+              }
+            ].map((item) => (
+              <div class="flex items-start space-x-4 p-6 bg-primary-50 rounded-xl hover:bg-primary-100 transition-colors">
+                <div class="text-3xl">{item.icon}</div>
+                <div>
+                  <h3 class="text-lg font-semibold text-neutral-800 mb-2">{item.title}</h3>
+                  <p class="text-neutral-600">{item.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div class="space-y-6">
+            {[
+              {
+                icon: "📱",
+                title: "Smart Technology",
+                description: "Reliance on technology that reduces the need for consumables such as paper, toner, and energy"
+              },
+              {
+                icon: "🧽",
+                title: "Non-Toxic Cleaning",
+                description: "Greater use of non-toxic chemicals, including effective cleaning supplies"
+              },
+              {
+                icon: "♻️",
+                title: "Recycling Program",
+                description: "Partnership with Terracycle Zero Waste for comprehensive recycling"
+              }
+            ].map((item) => (
+              <div class="flex items-start space-x-4 p-6 bg-primary-50 rounded-xl hover:bg-primary-100 transition-colors">
+                <div class="text-3xl">{item.icon}</div>
+                <div>
+                  <h3 class="text-lg font-semibold text-neutral-800 mb-2">{item.title}</h3>
+                  <p class="text-neutral-600">{item.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Terracycle Partnership Section -->
+  <section class="py-20 bg-background">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <div class="space-y-8 observe-fade">
+            <h2 class="text-h2 font-heading font-semibold text-neutral-800">
+              Terracycle Zero Waste Partnership
+            </h2>
+            
+            <p class="text-lg text-neutral-600 leading-relaxed">
+              We have partnered with Terracycle Zero Waste to assist with our recycling. We encourage our patients to bring in their used dental products, and we'll have them recycled for you. You help the environment while we do too!
+            </p>
+
+            <div class="bg-white rounded-xl p-8 shadow-lg">
+              <h3 class="text-xl font-semibold text-neutral-800 mb-4">
+                What You Can Bring:
+              </h3>
+              <ul class="space-y-2">
+                {[
+                  "Toothpaste tubes and caps",
+                  "Toothbrushes",
+                  "Toothpaste outer packaging",
+                  "Interdental brushes",
+                  "Flossettes",
+                  "Floss containers"
+                ].map((item) => (
+                  <li class="flex items-start space-x-3">
+                    <svg class="w-5 h-5 text-primary-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                    </svg>
+                    <span class="text-neutral-700">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          <div class="text-center observe-fade">
+            <img
+              src="/images/terracycle-photoroom.png-photoroom.png"
+              alt="Terracycle Zero Waste partnership logo"
+              width="203"
+              height="auto"
+              loading="lazy"
+              class="mx-auto mb-6"
+            />
+            <div class="bg-primary-500 text-white rounded-xl p-6">
+              <h3 class="text-xl font-semibold mb-3">Make a Difference</h3>
+              <p class="leading-relaxed">
+                Bring your used dental products to your next appointment and help us reduce waste together!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Environmental Impact Section -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center observe-fade">
+        <h2 class="text-h2 font-heading font-semibold text-neutral-800 mb-8">
+          Our Environmental Commitment
+        </h2>
+        
+        <div class="grid md:grid-cols-3 gap-8 mt-12">
+          <div class="bg-primary-50 rounded-xl p-8">
+            <div class="text-4xl mb-4">🌱</div>
+            <h3 class="text-xl font-semibold text-neutral-800 mb-4">Reduced Waste</h3>
+            <p class="text-neutral-600">
+              Digital processes and efficient equipment minimize material consumption and waste generation.
+            </p>
+          </div>
+          
+          <div class="bg-primary-50 rounded-xl p-8">
+            <div class="text-4xl mb-4">💡</div>
+            <h3 class="text-xl font-semibold text-neutral-800 mb-4">Energy Conservation</h3>
+            <p class="text-neutral-600">
+              Energy-efficient equipment and smart technology reduce our carbon footprint.
+            </p>
+          </div>
+          
+          <div class="bg-primary-50 rounded-xl p-8">
+            <div class="text-4xl mb-4">🌍</div>
+            <h3 class="text-xl font-semibold text-neutral-800 mb-4">Community Impact</h3>
+            <p class="text-neutral-600">
+              Working together with patients and partners to create a more sustainable future.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="py-20 bg-primary-500 text-white text-center">
+    <div class="container mx-auto px-4 observe-fade">
+      <div class="max-w-3xl mx-auto space-y-8">
+        <h2 class="text-h2 font-heading font-semibold">
+          Join Our Sustainable Journey
+        </h2>
+        <p class="text-xl text-primary-100">
+          To organise an appointment please call
+          <a
+            href="tel:96875050"
+            class="text-white font-semibold hover:text-primary-100 transition-colors"
+          >
+            9687 5050
+          </a>
+          or press here to book online
+        </p>
+        <a
+          href="https://apac.dentalhub.online/soe/new/%20?pid=AUTOP01"
+          class="btn bg-white text-primary-500 hover:bg-primary-50 text-lg inline-block"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Book now
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

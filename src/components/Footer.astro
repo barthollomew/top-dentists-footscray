@@ -187,11 +187,24 @@
     mapContainer.addEventListener('click', function() {
       if (!mapLoaded) {
         mapLoaded = true;
-        const script = document.createElement('script');
-        script.src = `https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap`;
-        script.async = true;
-        script.defer = true;
-        document.head.appendChild(script);
+        
+        // Check if API key is available from environment or meta tag
+        const metaElement = document.querySelector('meta[name="google-maps-key"]') as HTMLMetaElement;
+        const apiKey = import.meta.env?.PUBLIC_GOOGLE_MAPS_API_KEY || metaElement?.content;
+        
+        if (apiKey) {
+          const script = document.createElement('script');
+          script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&callback=initMap`;
+          script.async = true;
+          script.defer = true;
+          document.head.appendChild(script);
+        } else {
+          // Fallback: Open Google Maps in new tab
+          const lat = mapContainer.dataset.lat || '-37.800433';
+          const lng = mapContainer.dataset.lng || '144.899252';
+          const mapsUrl = `https://www.google.com/maps?q=${lat},${lng}+(Top+Dentists+Footscray)&z=18`;
+          window.open(mapsUrl, '_blank', 'noopener,noreferrer');
+        }
       }
     });
   }
