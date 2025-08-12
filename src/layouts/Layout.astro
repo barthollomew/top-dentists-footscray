@@ -36,7 +36,7 @@ const {
       <meta name="google-maps-key" content={import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY} />
     )}
   </head>
-  <body class={`font-sans text-neutral-800 bg-background ${bodyClass}`.trim()}>
+  <body class={`font-sans text-neutral-800 bg-background antialiased ${bodyClass}`.trim()}>
     <a href="#main-content" class="skip-to-main">Skip to main content</a>
     <Header />
     
@@ -60,7 +60,7 @@ const {
 
       /* Button base styles */
       .btn {
-        @apply px-6 py-3 rounded-full font-semibold transition-all duration-200 focus-ring;
+        @apply px-4 py-2 sm:px-6 sm:py-3 rounded-full font-semibold transition-all duration-200 focus-ring text-sm sm:text-base;
       }
 
       .btn-primary {
@@ -73,7 +73,7 @@ const {
 
       /* Card styles */
       .card {
-        @apply bg-white rounded-lg shadow-lg overflow-hidden;
+        @apply bg-white rounded-lg shadow-lg overflow-hidden transition-shadow duration-200 hover:shadow-xl;
       }
 
       /* Text utilities */
@@ -124,7 +124,30 @@ const {
 
       /* Skip to main content link for screen readers */
       .skip-to-main {
-        @apply absolute left-0 top-0 bg-primary-500 text-white px-4 py-2 rounded-br-lg transform -translate-y-full focus:translate-y-0 transition-transform z-50;
+        @apply absolute left-0 top-0 bg-primary-500 text-white px-3 py-2 sm:px-4 rounded-br-lg transform -translate-y-full focus:translate-y-0 transition-transform z-50 text-sm sm:text-base;
+      }
+      
+      /* Responsive text utilities */
+      .text-responsive {
+        @apply text-sm sm:text-base lg:text-lg;
+      }
+      
+      .text-responsive-lg {
+        @apply text-base sm:text-lg lg:text-xl;
+      }
+      
+      /* Improved contrast for accessibility */
+      .text-muted {
+        @apply text-neutral-600;
+      }
+      
+      /* Better spacing utilities */
+      .section-spacing {
+        @apply py-12 sm:py-16 lg:py-20;
+      }
+      
+      .container-spacing {
+        @apply px-4 sm:px-6 lg:px-8;
       }
     </style>
 
@@ -169,6 +192,26 @@ const {
           }
         `;
         document.head.appendChild(style);
+      }
+      
+      // Add touch-friendly improvements for mobile
+      function addTouchSupport() {
+        // Add tap highlight removal for better touch experience
+        const style = document.createElement('style');
+        style.innerHTML = `
+          .btn, button, a {
+            -webkit-tap-highlight-color: transparent;
+          }
+        `;
+        document.head.appendChild(style);
+        
+        // Improve scrolling on iOS
+        document.body.style.webkitOverflowScrolling = 'touch';
+      }
+      
+      // Initialize touch support on mobile devices
+      if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
+        addTouchSupport();
       }
     </script>
   </body>

@@ -12,51 +12,53 @@ const navigation = [
 
 <header class="fixed top-0 left-0 right-0 z-50 bg-primary-500 shadow-lg">
   <!-- Alert Banner -->
-  <div class="bg-primary-600 text-white py-2 text-center text-sm">
+  <div class="bg-primary-600 text-white py-2 text-center text-xs sm:text-sm">
     <div class="container mx-auto px-4">
-      <strong>Special: $100 Off Teeth Whitening!</strong>
-      <svg class="inline-block w-4 h-4 ml-2" fill="currentColor" viewBox="0 0 20 20">
-        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-      </svg>
+      <span class="inline-block">
+        <strong>Special: $100 Off Teeth Whitening!</strong>
+        <svg class="inline-block w-3 h-3 sm:w-4 sm:h-4 ml-1 sm:ml-2" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+        </svg>
+      </span>
     </div>
   </div>
 
   <!-- Main Navigation -->
   <nav class="bg-primary-500" aria-label="Main navigation">
-    <div class="container mx-auto px-4 py-4">
-      <div class="flex items-center justify-between gap-4">
+    <div class="container mx-auto px-4 py-3 sm:py-4">
+      <div class="flex items-center justify-between gap-2 sm:gap-4">
         <!-- Left: Logo + Mobile Menu Button -->
-        <div class="flex items-center gap-3">
+        <div class="flex items-center gap-2 sm:gap-3">
           <!-- Logo -->
           <a 
             href="/" 
-            class="flex items-center"
+            class="flex items-center flex-shrink-0"
             aria-label="Top Dentists Footscray - Home"
           >
             <img
               src="/images/b17c66553a3c6189bde0e6fbac714f0f_top-dentists-footscray-logo-white.webp"
               alt="Top Dentists Footscray logo"
               loading="eager"
-              class="h-12 w-auto"
+              class="h-10 sm:h-12 w-auto"
             />
           </a>
 
           <!-- Mobile Menu Button -->
           <button
             id="mobile-menu-button"
-            class="md:hidden text-white focus:outline-none focus:ring-2 focus:ring-white/25 p-2 rounded-md"
+            class="lg:hidden text-white focus:outline-none focus:ring-2 focus:ring-white/25 p-1.5 sm:p-2 rounded-md"
             aria-expanded="false"
             aria-controls="mobile-menu"
             aria-label="Open navigation menu"
           >
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
             </svg>
           </button>
         </div>
 
         <!-- Center: Desktop Navigation -->
-        <div class="hidden md:flex items-center space-x-8">
+        <div class="hidden lg:flex items-center space-x-6 xl:space-x-8">
           {navigation.map((item) => (
             <a
               href={item.href}
@@ -73,18 +75,19 @@ const navigation = [
         <!-- Right: Book Now Button -->
         <a
           href="https://apac.dentalhub.online/soe/new/%20?pid=AUTOP01"
-          class="bg-white text-primary-500 px-6 py-2 rounded-full font-semibold hover:bg-primary-50 transition-colors focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-primary-500"
+          class="bg-white text-primary-500 px-4 py-2 sm:px-6 rounded-full font-semibold text-sm sm:text-base hover:bg-primary-50 transition-colors focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-primary-500 flex-shrink-0"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Book Now
+          <span class="hidden sm:inline">Book Now</span>
+          <span class="sm:hidden">Book</span>
         </a>
       </div>
 
       <!-- Mobile Navigation Menu -->
       <div
         id="mobile-menu"
-        class="md:hidden mt-4 pb-4 border-t border-primary-400 pt-4 hidden"
+        class="lg:hidden mt-4 pb-4 border-t border-primary-400 pt-4 hidden"
         role="menu"
       >
         <div class="flex flex-col space-y-3">
@@ -115,7 +118,7 @@ const navigation = [
 </header>
 
 <!-- Spacer to prevent content from hiding behind fixed header -->
-<div class="h-24"></div>
+<div class="h-20 sm:h-24"></div>
 
 <script>
   // Mobile menu functionality

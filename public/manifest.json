@@ -1,0 +1,41 @@
+{
+  "name": "Top Dentists Footscray",
+  "short_name": "TDF",
+  "description": "Affordable dental care in Footscray since 1994. Professional dental treatments for the whole family.",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "theme_color": "#729177",
+  "background_color": "#f5f3ef",
+  "categories": ["medical", "health"],
+  "icons": [
+    {
+      "src": "/images/app-icon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/images/favicon.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Book Appointment",
+      "url": "https://apac.dentalhub.online/soe/new/%20?pid=AUTOP01",
+      "description": "Book an appointment online"
+    },
+    {
+      "name": "Our Services",
+      "url": "/services",
+      "description": "View our dental services"
+    },
+    {
+      "name": "Contact Us",
+      "url": "tel:+61396875050",
+      "description": "Call us directly"
+    }
+  ]
+}
