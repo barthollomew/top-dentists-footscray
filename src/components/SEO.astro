@@ -25,6 +25,7 @@ const fullTitle = title === siteName ? title : `${title} | ${siteName}`;
 <meta name="description" content={description} />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta charset="utf-8" />
+<meta name="theme-color" content="#729177" />
 
 <!-- Canonical URL -->
 <link rel="canonical" href={canonical} />
@@ -45,7 +46,8 @@ const fullTitle = title === siteName ? title : `${title} | ${siteName}`;
 <meta property="twitter:image" content={new URL(image, Astro.site).href} />
 
 <!-- Favicon -->
-<link rel="shortcut icon" type="image/x-icon" href="/images/favicon.png" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="shortcut icon" type="image/png" href="/images/favicon.png" />
 <link rel="apple-touch-icon" href="/images/app-icon.png" />
 
 <!-- Google Fonts -->

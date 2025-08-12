@@ -24,21 +24,38 @@ const navigation = [
   <!-- Main Navigation -->
   <nav class="bg-primary-500" aria-label="Main navigation">
     <div class="container mx-auto px-4 py-4">
-      <div class="flex items-center justify-between">
-        <!-- Mobile Menu Button -->
-        <button
-          id="mobile-menu-button"
-          class="md:hidden text-white focus:outline-none focus:ring-2 focus:ring-white/25 p-2 rounded-md"
-          aria-expanded="false"
-          aria-controls="mobile-menu"
-          aria-label="Toggle navigation menu"
-        >
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-          </svg>
-        </button>
+      <div class="flex items-center justify-between gap-4">
+        <!-- Left: Logo + Mobile Menu Button -->
+        <div class="flex items-center gap-3">
+          <!-- Logo -->
+          <a 
+            href="/" 
+            class="flex items-center"
+            aria-label="Top Dentists Footscray - Home"
+          >
+            <img
+              src="/images/b17c66553a3c6189bde0e6fbac714f0f_top-dentists-footscray-logo-white.webp"
+              alt="Top Dentists Footscray logo"
+              loading="eager"
+              class="h-12 w-auto"
+            />
+          </a>
 
-        <!-- Desktop Navigation -->
+          <!-- Mobile Menu Button -->
+          <button
+            id="mobile-menu-button"
+            class="md:hidden text-white focus:outline-none focus:ring-2 focus:ring-white/25 p-2 rounded-md"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+            aria-label="Open navigation menu"
+          >
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Center: Desktop Navigation -->
         <div class="hidden md:flex items-center space-x-8">
           {navigation.map((item) => (
             <a
@@ -53,23 +70,7 @@ const navigation = [
           ))}
         </div>
 
-        <!-- Logo -->
-        <a 
-          href="/" 
-          class="flex items-center"
-          aria-label="Top Dentists Footscray - Home"
-        >
-          <img
-            src="/images/b17c66553a3c6189bde0e6fbac714f0f_top-dentists-footscray-logo-white.webp"
-            alt="Top Dentists Footscray logo"
-            width="85"
-            height="auto"
-            loading="eager"
-            class="h-12 w-auto"
-          />
-        </a>
-
-        <!-- Book Now Button -->
+        <!-- Right: Book Now Button -->
         <a
           href="https://apac.dentalhub.online/soe/new/%20?pid=AUTOP01"
           class="bg-white text-primary-500 px-6 py-2 rounded-full font-semibold hover:bg-primary-50 transition-colors focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-primary-500"
@@ -101,7 +102,7 @@ const navigation = [
           ))}
           <div class="pt-2">
             <a
-              href="tel:(03)96875050"
+              href="tel:+61396875050"
               class="text-white font-bold text-lg hover:text-primary-100 transition-colors"
             >
               (03) 9687 5050
@@ -127,6 +128,7 @@ const navigation = [
       
       mobileMenuButton.setAttribute('aria-expanded', String(!isExpanded));
       mobileMenu.classList.toggle('hidden');
+      mobileMenuButton.setAttribute('aria-label', isExpanded ? 'Open navigation menu' : 'Close navigation menu');
       
       // Update button icon
       const icon = mobileMenuButton.querySelector('svg path');
@@ -143,13 +145,14 @@ const navigation = [
   // Close mobile menu when clicking outside
   document.addEventListener('click', (event) => {
     if (mobileMenu && mobileMenuButton) {
-      const target = event.target as Element;
-      const isMenuButton = mobileMenuButton.contains(target);
-      const isMenuContent = mobileMenu.contains(target);
+      const target = event.target;
+      const isMenuButton = target instanceof Element && mobileMenuButton.contains(target);
+      const isMenuContent = target instanceof Element && mobileMenu.contains(target);
       
       if (!isMenuButton && !isMenuContent && !mobileMenu.classList.contains('hidden')) {
         mobileMenu.classList.add('hidden');
         mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuButton.setAttribute('aria-label', 'Open navigation menu');
         
         // Reset icon
         const icon = mobileMenuButton.querySelector('svg path');

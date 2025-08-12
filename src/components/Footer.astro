@@ -106,7 +106,7 @@
         <p class="text-lg">
           To organise an appointment please call
           <a
-            href="tel:96875050"
+            href="tel:+61396875050"
             class="text-primary-300 hover:text-primary-200 transition-colors font-semibold"
           >
             9687 5050
@@ -189,8 +189,8 @@
         mapLoaded = true;
         
         // Check if API key is available from environment or meta tag
-        const metaElement = document.querySelector('meta[name="google-maps-key"]') as HTMLMetaElement;
-        const apiKey = import.meta.env?.PUBLIC_GOOGLE_MAPS_API_KEY || metaElement?.content;
+        const metaElement = document.querySelector('meta[name="google-maps-key"]');
+        const apiKey = (import.meta.env && import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY) || (metaElement && metaElement.getAttribute('content'));
         
         if (apiKey) {
           const script = document.createElement('script');

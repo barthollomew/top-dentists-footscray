@@ -32,11 +32,15 @@ const {
       image={image}
       type={type}
     />
+    {import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY && (
+      <meta name="google-maps-key" content={import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY} />
+    )}
   </head>
   <body class={`font-sans text-neutral-800 bg-background ${bodyClass}`.trim()}>
+    <a href="#main-content" class="skip-to-main">Skip to main content</a>
     <Header />
     
-    <main class="min-h-screen">
+    <main id="main-content" class="min-h-screen">
       <slot />
     </main>
     
