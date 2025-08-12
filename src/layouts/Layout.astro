@@ -206,7 +206,7 @@ const {
         document.head.appendChild(style);
         
         // Improve scrolling on iOS
-        document.body.style.webkitOverflowScrolling = 'touch';
+        (document.body.style as any).webkitOverflowScrolling = 'touch';
       }
       
       // Initialize touch support on mobile devices
