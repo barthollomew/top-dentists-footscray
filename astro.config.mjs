@@ -5,7 +5,8 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://topdentistsfootscray.com.au',
+  site: 'https://barthollomew.github.io',
+  base: '/top-dentists-footscray',
   integrations: [tailwind(), sitemap()],
   image: {
     domains: ['astro.build'],
